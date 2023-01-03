@@ -1,0 +1,4 @@
+[[redirects]]
+from ="/*
+to = "/client/app.html"
+status = 200
