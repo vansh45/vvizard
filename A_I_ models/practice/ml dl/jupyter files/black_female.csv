@@ -1,0 +1,11 @@
+,age,workclass,fnlwgt,education,educational-num,marital-status,occupation,relationship,race,gender,capital-gain,capital-loss,hours-per-week,native-country,income
+21,34,Private,238588,Some-college,10,Never-married,Other-service,Own-child,Black,Female,0,0,35,United-States,<=50K
+48,52,Private,201062,11th,7,Separated,Priv-house-serv,Not-in-family,Black,Female,0,0,18,United-States,<=50K
+101,33,Private,202191,Some-college,10,Never-married,Adm-clerical,Unmarried,Black,Female,0,0,35,United-States,<=50K
+131,24,Private,247846,HS-grad,9,Never-married,Craft-repair,Unmarried,Black,Female,0,0,40,United-States,<=50K
+151,27,Private,221561,11th,7,Married-civ-spouse,Other-service,Wife,Black,Female,0,0,32,United-States,<=50K
+158,42,Private,113732,Some-college,10,Never-married,Handlers-cleaners,Unmarried,Black,Female,0,625,40,United-States,<=50K
+174,48,Local-gov,67229,Masters,14,Separated,Adm-clerical,Unmarried,Black,Female,0,0,40,United-States,<=50K
+184,44,Private,284652,HS-grad,9,Divorced,Sales,Unmarried,Black,Female,0,0,40,United-States,<=50K
+192,47,Private,411047,Some-college,10,Divorced,Adm-clerical,Not-in-family,Black,Female,0,0,37,United-States,<=50K
+194,26,Private,209440,HS-grad,9,Never-married,Prof-specialty,Unmarried,Black,Female,0,0,55,United-States,<=50K
