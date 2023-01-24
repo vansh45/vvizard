@@ -1,0 +1,16 @@
+#heading{
+    /* we hVE TO use # for id selectors */
+    color:crimson;
+    background-color: rgb(46, 45, 45);
+}
+p#gf{ color:blue;}
+li[class="d"]{ /* without mentioning d i can 
+    colorise whole class*/
+    color:brown
+}
+li[class~="a"]{
+    color: cadetblue;
+}
+
+ /*->     *{    }    can do for whole html doc*/
+
