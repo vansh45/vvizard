@@ -1,0 +1,21 @@
+
+a:hover{     text-decoration: wavy;    color :rgb(119, 85, 0) }
+h1{color :darkgreen}
+h3{color:darkslategrey;}
+li{ list-style-type:square;
+color :chartreuse}
+.sp{
+    color: rgb(0, 50, 78);
+}
+em.df{color: cadetblue;
+  font-weight: bold;
+}
+h1 i{color :crimson }
+ body h1+p {color:black;
+background-color: burlywood;
+
+ } 
+ p.e{color:darkviolet;}
+ #link{color:yellow}
+ #q{color :mediumvioletred}
+ /*# for id and . for class*/

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="w16hw.css">
+</head>
+<body>
+    <div class="a">
+    <h1> Contact Form</h1>
+    <p>
+       Your Name <input type="text" name="name" required >
+    </p>
+    <p>
+       Your Email <input type="email" name="email">
+    </p>
+    <legend>message :</legend>
+<textarea name="message" id="message" cols="80" rows="5"></textarea>
+</div>
+    
+<div class="b">
+    <p>
+        <select name="subject" id="subject">
+            <option value=""> select a type </option>
+            <option value="faq">FAQ</option>
+            <option value="vacancy">Vacancy</option>
+            <option value="salary query">Salary query</option>
+           <option value="others">Others</option>
+         
+        </select>
+    </p>
+   
+    <legend> others :</legend>
+    <textarea name="others" id="others" cols="50" rows="3"></textarea>
+    <p>
+        <input type="submit" value="submit">
+    </p>
+</div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+table,tr,th,td{
+    border:3px solid rgb(30, 11, 39);
+    border-collapse: separate;
+    padding: 12px;
+}
+th{
+    color: midnightblue;
+    background-color:rgb(136, 201, 206);
+}
+td.s{background-color: rgb(17, 112, 116);}
+td{ background-color: rgb(211, 253, 253);}

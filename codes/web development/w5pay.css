@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin:15px 35px;
+
+font-size: 17px;
+padding: 8px;
+}
+.container{
+    background-color: rgb(148, 130, 130);
+    padding: 5px 24px 15px 20px;
+    border: 2px solid lightslategray;
+    border-radius:10px ;
+}
+ input[type="radio"],
+input[type="address"],
+input[type="email"],
+input[type="number"],
+input[type="card_type"],
+select,
+textarea{
+  
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgb(77, 77, 77);
+    border-radius: 8px;
+    margin: 10px;
+} 
+fieldset{
+    background-color: ivory;
+    border: 1px solid rgb(220, 240, 248);
+}
+#main{ text-align: center;
+text-shadow:4px 3px 4px  black ;}
+
+input[type="submit"]{
+    background-color: orangered;
+    color: rgb(31, 7, 7);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    width: 60%;
+    text-align: center;
+}
+input[type="submit"]:hover{
+    background-color: cadetblue;
+}

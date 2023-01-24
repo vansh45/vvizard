@@ -1,0 +1,14 @@
+nav a{
+    text-decoration: none;
+    color:black;
+    text-align: center;
+    padding: 20px;
+    float:right;
+}
+nav{
+    background-color:grey;
+    overflow: hidden;
+}
+nav a:hover{
+    color: lightseagreen;
+}

@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ww{
+            box-sizing: border-box;
+        }
+
+        #a{
+            background-color: rgb(255, 173, 159);
+            padding: 40px;
+            border:  solid rgb(167, 0, 0) 15px;
+            height: 120px;
+            width: 200px;
+        }
+        p{
+            color: yellow;
+            width: 500px;
+            height: 100px;
+            background-image: url("c/C__-Image-1080x644.png");
+        }
+        .clip{
+            width: 400px;
+            height: 400px;
+            clip-path: polygon(48% 0, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+        } /* from clip path maker (google)*/
+        .d{
+            width: 800px;
+            height: 800px;
+            filter: blur(10px);
+            clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+        }
+    </style>
+</head>
+<body>
+    <p class="ww">hhjhjhj</p>
+    <p id="ee">jonhfuorhfurfu</p>
+    <div id="a">content box</div>
+     <img class ="clip"src="c/C__-Image-1080x644.png" alt="">
+     <img class ="d"src="c/C__-Image-1080x644.png" alt="">
+</body>
+</html>

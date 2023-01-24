@@ -1,0 +1,60 @@
+<!-- get   less secure all details saved on url-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="w5pay.css">
+    <title>payment form</title>
+    
+   
+</head>
+<body> 
+  
+    <div class="container">
+    <form action=""></form>
+<h1 id="main">payment form</h1>
+<h2>contact information</h2>
+<p>
+    <label for="name"> Name </label>
+     <input type="text" name="name" id="name" required>
+</p>
+<p> 
+    <label for="check"> you awake</label>
+    <input type="checkbox" checked id="check">
+     <!-- if we click anywhere on checkbox it will be
+    responded -->
+</p>
+<fieldset>
+    <legend>gender</legend> <!-- for box-->
+<p>
+    male <input type="radio" name="gender" id="male">
+    female <input type="radio" name="gender" id="female">
+</p>
+</fieldset><p>
+Address : <textarea name="address" id="address" cols="120" rows="5"></textarea>
+</p>    
+<p>Email: <input type="email" name="email" id="email" placeholder="binodbinod@gmail.com" required></p>
+<p>pincode: <input type="number" name="no." id="no." placeholder="464886"> </p>
+  <h2>payment information</h2>
+  <p> card type *:
+      <select name="card_type" id="card_type" required>
+    <option value="">--select a card type--</option>
+    <option value="visa">Visa</option>
+    <option value="mastercard">Mastercard</option>
+    <option value="rupay">Rupay</option>
+</select>
+    </p>
+<p>
+    Card Number <input type="number" name="card number" id="card number">
+</p>
+<p>
+    Expiration date <input type="date" name="expdate" id="exp_date">
+</p>
+<p> cvv <input type="password" name="cvv" id="cvv"></p>
+<input type="submit" value="Pay now">
+</div>
+</form>
+</body>
+</html>
