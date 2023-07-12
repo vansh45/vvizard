@@ -21,7 +21,7 @@ def processed_img(img_path):
     print(res)
     return res
 
-def run():
+def main():
     img1 = Image.open('../Meta/plant_logo_.png')
     img1 = img1.resize((100,100))
 
@@ -45,4 +45,5 @@ def run():
         if st.button("Predict"):
             result = processed_img(save_image_path)
             st.success("Predicted Plant is: "+result)
-run()
+if __name__ == '__main__':
+    main() 
