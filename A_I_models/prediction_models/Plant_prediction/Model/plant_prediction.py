@@ -22,7 +22,7 @@ def processed_img(img_path):
     return res
 
 def run():
-    img1 = Image.open('../Meta/plant_logo_.png')
+    img1 = Image.open('A_I_models/prediction_models/Plant_prediction/Meta/plant_logo_.png')
     img1 = img1.resize((100,100))
 
     st.image(img1,use_column_width=False)
