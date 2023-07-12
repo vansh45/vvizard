@@ -4,7 +4,7 @@ from tensorflow.keras.utils import load_img, img_to_array
 import numpy as np
 from keras.models import load_model
 
-model = load_model('plants.h5',compile=False)
+model = load_model('A_I_models/prediction_models/Plant_prediction/Model/plants.h5',compile=False)
 lab = {0: 'Aloevera (Ghritakumari)', 1: 'Dhaniya_patti (Coriander Leaves)', 2: 'Money Plant (Pothos)', 3: 'Neem (Margosa) ', 4: 'Pudina (Mint Leaves)'}
 
 def processed_img(img_path):
