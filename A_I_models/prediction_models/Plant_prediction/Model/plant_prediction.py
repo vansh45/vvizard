@@ -38,7 +38,7 @@ def run():
     img_file = st.file_uploader("Choose an Image plant ", type=["jpg", "png","jpeg"])
     if img_file is not None:
         st.image(img_file,use_column_width=False)
-        save_image_path = '../upload_images/'+img_file.name
+        save_image_path = 'A_I_models/prediction_models/Plant_prediction/upload_images'+img_file.name
         with open(save_image_path, "wb") as f:
             f.write(img_file.getbuffer())
 
