@@ -14,7 +14,7 @@ Who needs superhero-vision🦸 when you can rely on this miraculous web app whic
 
 Just click the photo and upload it here on the link to predict the plant leaves to save you from trouble...
 
-
+[Plant_classification](https://vansh45-vvizard-plant-prediction-by-vansh-samaiya.streamlit.app/)
 
 This Image Classification web app is made by me, which comprises Convolutional Neural Network and machine learning. And is trained on about 50% hand clicked images of plants from my pot garden and rest from internet. I trained the model using Convolutional Neural Networks which was a success and can recognize images with an accuracy of around 85%. lastly, I deployed using streamlit.
 
