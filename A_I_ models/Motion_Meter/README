@@ -1,0 +1,26 @@
+# vvizard
+
+1. Area_Coordinates.py:
+
+This script captures video from a file (test8.mp4 in this case) using OpenCV.
+It allows the user to define two areas of interest (Area 1 and Area 2) by clicking points on the video frame.
+The defined areas are stored in the area1 and area2 lists.
+The script uses OpenCV's cv2.namedWindow and cv2.setMouseCallback to handle mouse events for defining areas.
+It then displays the video frame, allowing the user to draw polygons for the defined areas.
+Pressing 's' saves the defined areas and moves to the next frame.
+
+2. Tracker.py:
+
+This class (Tracker) is responsible for tracking objects in consecutive frames.
+It maintains a dictionary (center_points) to store the center positions of detected objects along with their unique IDs.
+The update method takes a list of object rectangles in the current frame and updates the tracking information.
+It assigns IDs to new objects and checks for existing objects based on their proximity to previously tracked objects.
+
+3. Main.py:
+
+This is the main script that integrates YOLO object detection, area tracking, and counting.
+It uses the YOLO model (yolov8s.pt) from the Ultralytics library to perform object detection on each frame of the video.
+The Tracker class is used to track objects across frames.
+The script defines two areas (entry and exit) using the coordinates from Area_Coordinates.py.
+It then processes the object detection results, updates object tracking information, and counts the number of objects entering and exiting the defined areas.
+The results are displayed on the video frame, and the frame is continuously updated until the user presses the 'Esc' key.
