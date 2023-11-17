@@ -1,0 +1,38 @@
+This report provides a brief overview and analysis of two Python scripts, embeddings_generator.py and Main.py, designed for face recognition and attendance tracking. These scripts leverage the OpenCV and face_recognition libraries to achieve their objectives.
+
+embeddings_generator.py
+Purpose:
+This script generates facial embeddings from a set of images, facilitating face recognition in subsequent applications.
+
+Key Points:
+
+Utilizes OpenCV to read images from a specified directory.
+Converts images to RGB format for compatibility with face_recognition library.
+Applies face_recognition library to detect face locations and generate face encodings.
+Saves the resulting face encodings into a pickle file (embeddings.pkl).
+Provides feedback on face detection and handles cases where no faces are found in an image.
+Main.py
+Purpose:
+This script employs the generated face embeddings to perform real-time face recognition and attendance tracking using a webcam feed.
+
+Key Points:
+
+Loads previously saved face encodings from the pickle file.
+Captures frames from a specified video source (e.g., webcam).
+Resizes and processes each frame for face recognition.
+Compares face encodings in the current frame with known encodings.
+Marks attendance based on a time interval and a buffer to ensure consistency in recognitions.
+Displays the webcam feed with bounding boxes and names of recognized individuals.
+Prints the names of recognized individuals and maintains an attendance list.
+Recommendations:
+
+Directory Paths: Confirm that directory paths in both scripts are accurate and accessible.
+Error Handling: Implement robust error handling, particularly when reading images and performing face recognition.
+Code Organization: Consider structuring the code into functions or classes for improved readability and maintainability.
+Documentation: Enhance code documentation with comments and docstrings to explain functionality.
+Testing: Thoroughly test the scripts under various scenarios to ensure accuracy and reliability.
+Security: Exercise caution regarding security considerations, especially when handling attendance data.
+These scripts provide a foundation for a facial recognition and attendance tracking system. Further enhancements and optimizations can be explored based on specific use cases and requirements.
+
+
+The training data has a folder conatining images of people with their name as the filename and testing video is a simple video of survellience camera. As these are confidential hence not shared
