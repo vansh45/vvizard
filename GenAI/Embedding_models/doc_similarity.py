@@ -22,7 +22,7 @@ def get_similarity(documents, query):
     return cosine_similarity([query_embedding], document_embeddings)[0]
 
 documents = [
-    "Dogs are loyal and friendly pets",
+    "Dogs are loyal, friendly and social pets",
     "Cats are independent and aloof",
     "Dogs are man's best friend",
     "Cats consider themselves as independent creatures",
