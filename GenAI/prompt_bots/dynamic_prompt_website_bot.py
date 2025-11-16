@@ -23,7 +23,6 @@ length_input = st.selectbox("Length:", ["Short (1 to 2 sentences)", "Medium (2 p
 
 # Define prompt template with placeholders
 prompt_template = PromptTemplate(
-    input_variables=["job_input", "style_input", "length_input", "location_input"],
     template="""
 Please summarize the job titled "{job_input}" with the following specifications:
 Explanation Style: {style_input}
@@ -45,7 +44,8 @@ Location context (if any): {location_input}
 Please provide helpful and informative content. Use your knowledge to fill in typical information about this role. It's better to provide general, helpful information rather than saying information is unavailable. Make reasonable estimates based on industry standards when specific data isn't available.
 
 If certain information is not available in the job, respond with: "Insufficient Information available" instead of guessing.
-Ensure the summary is clear, accurate, and aligned with the provided style and length."""
+Ensure the summary is clear, accurate, and aligned with the provided style and length.""",
+input_variables=["job_input", "style_input", "length_input", "location_input"],
 validate_template = True
 )
 if st.button("Submit"):
