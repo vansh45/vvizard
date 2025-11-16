@@ -1,0 +1,18 @@
+{
+    "name": null,
+    "input_variables": [
+        "job_input",
+        "length_input",
+        "location_input",
+        "style_input"
+    ],
+    "optional_variables": [],
+    "output_parser": null,
+    "partial_variables": {},
+    "metadata": null,
+    "tags": null,
+    "template": "\nPlease summarize the job titled \"{job_input}\" with the following specifications:\nExplanation Style: {style_input}\nExplanation Length: {length_input}\n\n1. Job Summary\nProvide a clear explanation of what the job is about, following the given explanation style and length.\n\n2. Working Domain & Location\nIf available:\n- Describe the industry or domain (e.g., healthcare, software, finance, etc.)\n- Describe the typical location(s) or work mode (remote, hybrid, on-site, etc.)\nLocation context (if any): {location_input}\n\n3. Average Salary \n- Provide relevant average salary information based on general industry knowledge for this role\n- Include typical salary ranges even if approximate\n\nPlease provide helpful and informative content. Use your knowledge to fill in typical information about this role. It's better to provide general, helpful information rather than saying information is unavailable. Make reasonable estimates based on industry standards when specific data isn't available.\n\nIf certain information is not available in the job, respond with: \"Insufficient Information available\" instead of guessing.\nEnsure the summary is clear, accurate, and aligned with the provided style and length.",
+    "template_format": "f-string",
+    "validate_template": true,
+    "_type": "prompt"
+}

@@ -46,8 +46,8 @@ Please provide helpful and informative content. Use your knowledge to fill in ty
 
 If certain information is not available in the job, respond with: "Insufficient Information available" instead of guessing.
 Ensure the summary is clear, accurate, and aligned with the provided style and length."""
+validate_template = True
 )
-
 if st.button("Submit"):
     # Fill the prompt template dynamically
     final_prompt = prompt_template.format(
