@@ -1,29 +1,26 @@
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
-from typing import TypedDict, Annotated, Optional, Literal
+from typing import Optional, Literal
+from pydantic import BaseModel, Field
 
 load_dotenv()
 
 model = ChatOpenAI()
 
 # schema
-from typing import TypedDict, Annotated, Optional, Literal
-
-class JobInfo(TypedDict):
-    title: Annotated[str, "Job title"]
-    employer: Annotated[Optional[str], "Name of the hiring company"]
-    salary_range: Annotated[str, "Salary range for the role"]
-    field: Annotated[Literal["technical", "research", "other"], "Type of job field"]
-    education: Annotated[Optional[str], "Preferred education level"]
-    experience: Annotated[int, "Years of experience required"]
-    location: Annotated[str, "Primary work location"]
-    work_type: Annotated[Literal["remote", "hybrid", "onsite"], "Work arrangement"]
-    skills: Annotated[list[str], "Skills required for the job"]
-    responsibilities: Annotated[list[str], "Key responsibilities in the role"]
-
+class JobInfo(BaseModel):
+    title: str = Field(description="Job title")
+    employer: Optional[str] = Field(default=None, description="Name of the hiring company")
+    salary_range: str = Field(description="Salary range for the role")
+    field: Literal["technical", "research", "other"] = Field(description="Type of job field")
+    education: Optional[str] = Field(default=None, description="Preferred education level")
+    experience: int = Field(description="Years of experience required")
+    location: str = Field(description="Primary work location")
+    work_type: Literal["remote", "hybrid", "onsite"] = Field(description="Work arrangement")
+    skills: list[str] = Field(description="Skills required for the job")
+    responsibilities: list[str] = Field(description="Key responsibilities in the role")
 
 structured_model = model.with_structured_output(JobInfo)
-
 result = structured_model.invoke("""Extract all relevant information about the following job description and fill the JobInfo schema. Use only what is present in the text and avoid adding anything that is not stated.
 
 Job description:
