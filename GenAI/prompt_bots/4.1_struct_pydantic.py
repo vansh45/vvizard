@@ -1,26 +1,69 @@
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
-from typing import Optional, Literal
-from pydantic import BaseModel, Field
 
 load_dotenv()
 
 model = ChatOpenAI()
 
 # schema
-class JobInfo(BaseModel):
-    title: str = Field(description="Job title")
-    employer: Optional[str] = Field(default=None, description="Name of the hiring company")
-    salary_range: str = Field(description="Salary range for the role")
-    field: Literal["technical", "research", "other"] = Field(description="Type of job field")
-    education: Optional[str] = Field(default=None, description="Preferred education level")
-    experience: int = Field(description="Years of experience required")
-    location: str = Field(description="Primary work location")
-    work_type: Literal["remote", "hybrid", "onsite"] = Field(description="Work arrangement")
-    skills: list[str] = Field(description="Skills required for the job")
-    responsibilities: list[str] = Field(description="Key responsibilities in the role")
+json_schema = {
+    "title": "JobInfo",
+    "type": "object",
+    "properties": {
+        "title": {
+            "type": "string",
+            "description": "Job title"
+        },
+        "employer": {
+            "type": ["string", "null"],
+            "description": "Name of the hiring company"
+        },
+        "salary_range": {
+            "type": "string",
+            "description": "Salary range for the role"
+        },
+        "field": {
+            "type": "string",
+            "enum": ["technical", "research", "other"],
+            "description": "Type of job field"
+        },
+        "education": {
+            "type": ["string", "null"],
+            "description": "Preferred education level"
+        },
+        "experience": {
+            "type": "integer",
+            "description": "Years of experience required"
+        },
+        "location": {
+            "type": "string",
+            "description": "Primary work location"
+        },
+        "work_type": {
+            "type": "string",
+            "enum": ["remote", "hybrid", "onsite"],
+            "description": "Work arrangement"
+        },
+        "skills": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Skills required for the job"
+        },
+        "responsibilities": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "description": "Key responsibilities in the role"
+        }
+    },
+    "required": ["title", "salary_range", "field", "experience", "location", "work_type", "skills", "responsibilities"]
+}
 
-structured_model = model.with_structured_output(JobInfo)
+structured_model = model.with_structured_output(json_schema)
+
 result = structured_model.invoke("""Extract all relevant information about the following job description and fill the JobInfo schema. Use only what is present in the text and avoid adding anything that is not stated.
 
 Job description:
