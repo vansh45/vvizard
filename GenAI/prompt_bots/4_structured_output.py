@@ -47,7 +47,7 @@ R&D Principal Engineer
 
 
 
-As an intern, you will have the opportunity to gain practical experience through various projects. Each day, you will acquire knowledge by performing tasks as directed. You will also showcase your skills by supporting ABB’s operations and enhancing personal education/employment opportunities.
+As an intern, you will have the opportunity to gain practical experience through various projects. Each day, you'll acquire knowledge by performing tasks as directed. You will also showcase your skills by supporting ABB’s operations and enhancing personal education/employment opportunities.
 
 The work model for the role is onsite/hybrid in San Jose, CA.
 

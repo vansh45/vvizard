@@ -25,6 +25,7 @@ template2 = PromptTemplate(
     input_variables=['text']
 )
 
+# String output parser
 parser = StrOutputParser()
 
 chain = template1 | model | parser | template2 | model | parser
