@@ -21,7 +21,7 @@ template1 = PromptTemplate(
 
 # 2nd prompt -> summary  Without it: Error! Template gets an object, not a string
 template2 = PromptTemplate(
-    template='Write a 5 line summary on the following text. /n {text}',
+    template='Write a 100 words summary on the following text. /n {text}',
     input_variables=['text']
 )
 
