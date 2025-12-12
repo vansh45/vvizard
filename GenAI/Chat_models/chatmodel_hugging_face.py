@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-HF_API_KEY = os.getenv("HF_API_KEY")
+HF_API_KEY = os.getenv("HF2")
 
 llm = HuggingFaceEndpoint(
     repo_id="mistralai/Mistral-7B-Instruct-v0.2",  # Better chat model
