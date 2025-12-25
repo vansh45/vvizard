@@ -1,6 +1,6 @@
 from langchain_community.document_loaders import PyPDFLoader
 
-loader = PyPDFLoader('/home/vvizard/Music/vvizard/GenAI/RAGs/dl-curriculum.pdf')
+loader = PyPDFLoader('GenAI/material/dl-curriculum.pdf')
 
 docs = loader.load()
 
